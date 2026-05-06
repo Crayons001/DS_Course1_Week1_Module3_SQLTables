@@ -1,8 +1,5 @@
 # %%
 # CodeGrade step0
-# Run this cell without changes
-
-# SQL Library and Pandas Library
 import sqlite3
 import pandas as pd
 
