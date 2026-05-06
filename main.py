@@ -67,7 +67,7 @@ ORDER BY COUNT(customers.customerNumber) DESC
 
 # %%
 # CodeGrade step7
-df_products_sold = pd.read_sql("""
+df_product_sold = pd.read_sql("""
 SELECT products.productName, COUNT(DISTINCT orders.orderNumber) as numorders, SUM(orderdetails.quantityOrdered) as totalunits
 FROM products
 JOIN orderdetails ON products.productCode = orderdetails.productCode
