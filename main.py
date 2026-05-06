@@ -1,5 +1,8 @@
 # %%
 # CodeGrade step0
+# Run this cell without changes
+
+# SQL Library and Pandas Library
 import sqlite3
 import pandas as pd
 
@@ -11,7 +14,7 @@ pd.read_sql("""SELECT * FROM sqlite_master""", conn)
 # %%
 # CodeGrade step1
 df_boston = pd.read_sql("""
-SELECT employees.firstName || ' ' || employees.lastName AS full_name, employees.jobTitle FROM employees
+SELECT employees.firstName, employees.lastName, employees.jobTitle FROM employees
 JOIN offices ON employees.officeCode = offices.officeCode
 WHERE offices.city = 'Boston'
 """, conn)
